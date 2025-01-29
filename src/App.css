@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overscroll-behavior: none;
+    min-height: calc(100% + env(safe-area-inset-top));
+    overflow: scroll;
+}
+
+body {
+    font-family: var(--mainFont), sans-serif;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+:root {
+    --mainFont: Tektur;
+}
+
+/* text */
+p,span {
+    color: #FFFFFF;
+    cursor: default;
+}
+.text_center {
+    text-align: center;
+}
+.text_opacity_50 {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+/* blur */
+.blur_40{
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px)
+}
+.blur_20{
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px)
+}
+
+/* shadows */
+.shadow {
+    box-shadow: 0 1px 3px rgba(255,255,255,0.22) inset
+}
