@@ -1,14 +1,4 @@
-interface TelegramWebApps {
-    WebApp: {
-        setHeaderColor: (color: string) => void;
-        setBackgroundColor: (color: string) => void;
-        initDataUnsafe: {
-            user: {
-                language_code: string
-            }
-        }
-    }
-}
+import {TelegramWebApps} from "../../types/types.ts";
 
 declare global {
     interface Window {

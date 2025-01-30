@@ -1,9 +1,6 @@
 import React from 'react';
 import style from './loadingbar.module.sass';
-
-interface LoadingBarProps {
-    width: number;
-}
+import {LoadingBarProps} from "../../types/types.ts";
 
 const LoadingBar: React.FC<LoadingBarProps> = ({ width }) => {
     return (
