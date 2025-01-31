@@ -1,1 +1,72 @@
+@mixin bgi
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+@mixin info
+  display: flex
+  justify-content: space-between
+  align-items: center
+
 .mainpage
+  height: 100vh
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 100vh
+    padding: 8px
+    &__info
+      &__header
+        @include info
+        &__user
+          max-width: 50%
+          display: flex
+          align-items: center
+          &__icon
+            margin-right: 8px
+            &_img
+              width: 32px
+              height: 32px
+          &__name
+            width: 100%
+            overflow: hidden
+            &_text
+              margin-top: 3px
+              font-size: 16px
+              font-weight: 500
+              white-space: nowrap
+              text-overflow: ellipsis
+              overflow: hidden
+      &__resources
+        display: flex
+        gap: 4px
+        margin-top: 8px
+      &__footer
+        @include info
+        gap: 4px
+        margin-top: 16px
+    &__homeButton
+      position: absolute
+      bottom: 160px
+      background: url('src/assets/MainPage/MainButton/mainButton.png') no-repeat
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-bottom: 8px
+      padding-left: 13px
+      padding-right: 13px
+      gap: 8px
+      background-size: 100% 100%
+      width: 285px
+      height: 58px
+      cursor: pointer
+
+  &__bgiSky
+    background-image: url('src/assets/MainPage/main-background-blue-sky.png')
+    @include bgi
+  &__bgiPlanet
+    background-image: url('src/assets/MainPage/planet.svg')
+    @include bgi
+  &__bgiStarship
+    background-image: url('src/assets/MainPage/main-background-starship.png')
+    @include bgi

@@ -1,4 +1,3 @@
-// NavMenuItem.tsx
 import React from 'react';
 import style from './navmenuitem.module.sass';
 import {NavLink} from "react-router-dom";

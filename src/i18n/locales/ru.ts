@@ -15,6 +15,16 @@ export const ru = {
                 home: "Звездолет",
                 tasks: "Задания",
                 friends: "Друзья"
+            },
+            pages: {
+                main: {
+                    info: {
+                        robots: "активные роботы",
+                        energy: "кол-во энергии",
+                        timer: "время до окончания энергии"
+                    },
+                    mainButton: "Зарядить батарею"
+                }
             }
         }
     }

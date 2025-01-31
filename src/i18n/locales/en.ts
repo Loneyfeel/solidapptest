@@ -15,6 +15,16 @@ export const en = {
                 home: "Starship",
                 tasks: "Tasks",
                 friends: "Friends"
+            },
+            pages: {
+                main: {
+                    info: {
+                        robots: "active robots",
+                        energy: "amount of energy",
+                        timer: "time until energy ends"
+                    },
+                    mainButton: "Charge storage devices"
+                }
             }
         }
     }
