@@ -5,7 +5,7 @@ import {APP_ROUTES} from '../../constants/routes';
 import {useTelegramNavigation} from '../../share/hooks/useTelegramNavigation';
 import NavMenu from '../NavMenu';
 
-export const AppContent: React.FC = () => {
+const AppContent: React.FC = () => {
     useTelegramNavigation();
 
     return (
@@ -21,3 +21,5 @@ export const AppContent: React.FC = () => {
         </>
     )
 };
+
+export default AppContent

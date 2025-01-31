@@ -14,6 +14,7 @@ export const useAppInit = () => {
             // Инициализация Telegram
             tg.setBackgroundColor("#000000");
             tg.setHeaderColor("#000000");
+            tg.disableVerticalSwipes()
 
             // Установка языка
             i18n.changeLanguage(userDataUnsafe.language_code);

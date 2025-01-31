@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Preloader from "./screens/Preloader";
 import { useAppInit } from "./share/hooks/useAppInit";
-import {AppContent} from "./components/AppContent/AppContent.tsx";
+import AppContent from "./components/AppContent";
 
 function App() {
     const { isLoaded } = useAppInit();

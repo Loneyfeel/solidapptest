@@ -4,6 +4,7 @@ export interface TelegramWebApps {
     WebApp: {
         setHeaderColor: (color: string) => void;
         setBackgroundColor: (color: string) => void;
+        disableVerticalSwipes: () => void;
         initDataUnsafe: {
             user: {
                 language_code: string;
