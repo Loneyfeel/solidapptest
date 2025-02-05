@@ -4,6 +4,19 @@ import {useTranslation} from "react-i18next";
 import NavMenuItem from "./NavMenuItem";
 import {NavItems} from "../../types/types.ts";
 
+import radarColored from '../../assets/Navbar/radar-colored.png'
+import radarGray from '../../assets/Navbar/radar-gray.svg'
+import marketColored from '../../assets/Navbar/market-colored.png'
+import marketGray from '../../assets/Navbar/market-gray.svg'
+import starshipColored from '../../assets/Navbar/starship-colored.svg'
+import starshipGray from '../../assets/Navbar/starship-gray.svg'
+import tasksColored from '../../assets/Navbar/tasks-colored.png'
+import tasksGray from '../../assets/Navbar/tasks-gray.svg'
+import friendsColored from '../../assets/Navbar/friends-colored.png'
+import friendsGray from '../../assets/Navbar/friends-gray.svg'
+
+import navMenuBackground from '../../assets/Navbar/navbar-background.svg'
+
 const NavMenu: React.FC = () => {
     const {t} = useTranslation();
 
@@ -11,8 +24,8 @@ const NavMenu: React.FC = () => {
         radar: {
             to: '/radar',
             icons: {
-                colored: 'src/assets/Navbar/radar-colored.png',
-                gray: 'src/assets/Navbar/radar-gray.svg'
+                colored: radarColored,
+                gray: radarGray
             },
             label: t("app.navMenu.radar")
         },
@@ -20,8 +33,8 @@ const NavMenu: React.FC = () => {
             to: '/market',
             icons:
                 {
-                    colored: 'src/assets/Navbar/market-colored.png',
-                    gray: 'src/assets/Navbar/market-gray.svg'
+                    colored: marketColored,
+                    gray: marketGray
                 },
             label: t("app.navMenu.market")
         },
@@ -29,8 +42,8 @@ const NavMenu: React.FC = () => {
             to: '/',
             icons:
                 {
-                    colored: 'src/assets/Navbar/starship-colored.svg',
-                    gray: 'src/assets/Navbar/starship-gray.svg'
+                    colored: starshipColored,
+                    gray: starshipGray
                 },
             label: t("app.navMenu.home"),
             isHome: true
@@ -39,8 +52,8 @@ const NavMenu: React.FC = () => {
             to: '/tasks',
             icons:
                 {
-                    colored: 'src/assets/Navbar/tasks-colored.png',
-                    gray: 'src/assets/Navbar/tasks-gray.svg'
+                    colored: tasksColored,
+                    gray: tasksGray
                 },
             label: t("app.navMenu.tasks")
         },
@@ -48,8 +61,8 @@ const NavMenu: React.FC = () => {
             to: '/friends',
             icons:
                 {
-                    colored: 'src/assets/Navbar/friends-colored.png',
-                    gray: 'src/assets/Navbar/friends-gray.svg'
+                    colored: friendsColored,
+                    gray: friendsGray
                 },
             label: t("app.navMenu.friends")
         },
@@ -57,7 +70,10 @@ const NavMenu: React.FC = () => {
 
     return (
         <>
-            <div className={style.navmenu}>
+            <div className={style.navmenu}
+            style={{
+                backgroundImage: `url(${navMenuBackground})`
+            }}>
                 <div className={style.navmenu__content}>
                     <NavMenuItem {...NAV_ITEMS.radar} />
                     <NavMenuItem {...NAV_ITEMS.market} />

@@ -1,7 +1,3 @@
-@mixin bgi
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: center center
 @mixin info
   display: flex
   justify-content: space-between
@@ -48,7 +44,6 @@
     &__homeButton
       position: absolute
       bottom: 160px
-      background: url('src/assets/MainPage/MainButton/mainButton.png') no-repeat
       display: flex
       align-items: center
       justify-content: center
@@ -61,12 +56,7 @@
       height: 58px
       cursor: pointer
 
-  &__bgiSky
-    background-image: url('src/assets/MainPage/main-background-blue-sky.png')
-    @include bgi
-  &__bgiPlanet
-    background-image: url('src/assets/MainPage/planet.svg')
-    @include bgi
-  &__bgiStarship
-    background-image: url('src/assets/MainPage/main-background-starship.png')
-    @include bgi
+  &__bgi
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center

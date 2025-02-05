@@ -20,7 +20,10 @@ import spore from '../../assets/MainPage/Info/spore.png'
 import fruits from '../../assets/MainPage/Info/fruits.png'
 import moss from '../../assets/MainPage/Info/moss.png'
 import money from '../../assets/MainPage/Info/money.png'
-
+import buttonBackground from '../../assets/MainPage/MainButton/mainButton.png'
+import bgiSky from '../../assets/MainPage/main-background-blue-sky.png'
+import bgiPlanet from '../../assets/MainPage/planet.svg'
+import bgiStarship from '../../assets/MainPage/main-background-starship.png'
 
 const MainPage: React.FC = () => {
     const {t} = useTranslation();
@@ -33,9 +36,18 @@ const MainPage: React.FC = () => {
     return (
         <>
             <div className={style.mainpage}>
-                <div className={style.mainpage__bgiSky}>
-                    <div className={style.mainpage__bgiPlanet}>
-                        <div className={style.mainpage__bgiStarship}>
+                <div className={style.mainpage__bgi}
+                     style={{
+                         backgroundImage: `url(${bgiSky})`
+                     }}>
+                    <div className={style.mainpage__bgi}
+                         style={{
+                             backgroundImage: `url(${bgiPlanet})`
+                         }}>
+                        <div className={style.mainpage__bgi}
+                             style={{
+                                 backgroundImage: `url(${bgiStarship})`
+                             }}>
                             <div className={style.mainpage__content}>
                                 <div className={style.mainpage__content__info}>
                                     <BlurContainer
@@ -46,9 +58,11 @@ const MainPage: React.FC = () => {
                                         background={'rgba(0, 0, 0, 0.2)'}
                                     >
                                         <div className={style.mainpage__content__info__header}>
-                                            <NavLink to="/profile" className={style.mainpage__content__info__header__user}>
+                                            <NavLink to="/profile"
+                                                     className={style.mainpage__content__info__header__user}>
                                                 <div className={style.mainpage__content__info__header__user__icon}>
-                                                    <img src={avatar} alt={''} className={style.mainpage__content__info__header__user__icon_img}/>
+                                                    <img src={avatar} alt={''}
+                                                         className={style.mainpage__content__info__header__user__icon_img}/>
                                                 </div>
                                                 <div className={style.mainpage__content__info__header__user__name}>
                                                     <p className={`text_link ${style.mainpage__content__info__header__user__name_text}`}>
@@ -97,11 +111,15 @@ const MainPage: React.FC = () => {
                                                 text={t("app.pages.main.info.timer")}
                                             />
                                         </div>
-                                        <LoadingBar width={calculatePercentage(gameData.energy.current, gameData.energy.maximum)}/>
+                                        <LoadingBar
+                                            width={calculatePercentage(gameData.energy.current, gameData.energy.maximum)}/>
                                     </BlurContainer>
                                 </div>
                                 <div className={style.mainpage__content__homeButton}
-                                onClick={handleMainButtonClick}>
+                                     style={{
+                                         backgroundImage: `url(${buttonBackground})`
+                                     }}
+                                     onClick={handleMainButtonClick}>
                                     <p className={`text_link ${style.mainpage__content__homeButton_text}`}>
                                         {t("app.pages.main.mainButton")}
                                     </p>

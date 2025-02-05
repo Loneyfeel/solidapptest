@@ -3,6 +3,8 @@ import style from './preloader.module.sass';
 import {useTranslation} from "react-i18next";
 import LoadingBar from "../../components/LoadingBar";
 
+import preloaderBackground from '../../assets/Preloader/preloader-background.png'
+
 const Preloader: React.FC = () => {
     const {t} = useTranslation();
     const [progress, setProgress] = useState<number>(0);
@@ -14,7 +16,10 @@ const Preloader: React.FC = () => {
 
     return (
         <>
-            <div className={style.preloader}>
+            <div className={style.preloader}
+            style={{
+                backgroundImage: `url(${preloaderBackground})`
+            }}>
                 <div className={style.preloader__content}>
                     <div className={style.preloader__content__title}>
                         <p className={`text_center ${style.preloader__content__title_text}`}>
